@@ -1,5 +1,5 @@
 ---
-- name: Change pwd
+- name: Change pwd2
   hosts: all 
   tasks:
    - name: Change password
