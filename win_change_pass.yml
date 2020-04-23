@@ -1,5 +1,9 @@
 ---
 - name: Change pwd
-  win_user: 
-   - name: Administrator@automation.local
-     password: "1234"
+  hosts: all 
+  tasks:
+   - name: Change password
+     win_user: 
+      name: Administrator@automation.local
+      password: "1234"
+     
