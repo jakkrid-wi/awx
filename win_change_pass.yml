@@ -1,4 +1,5 @@
--name: Change pwd
- win_user: 
-   name: Administrator@automation.local
-   password: "1234"
+---
+- name: Change pwd
+  win_user: 
+   - name: Administrator@automation.local
+     password: "1234"
