@@ -1,4 +1,4 @@
--name: Chane pwd
+-name: Change pwd
  win_user: 
-   name: 
+   name: Administrator@automation.local
    password: "1234"
