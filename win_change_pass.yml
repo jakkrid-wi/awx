@@ -1,5 +1,5 @@
 ---
-- name: "Add the user"
+- name: Add the user
   user: 
    - name: "lookpla"
 
