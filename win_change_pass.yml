@@ -1,7 +1,6 @@
 ---
-- name: Add the user
-  user: 
-   - name: "lookpla"
-
-
+- name: Add user
+  user:
+    name: "{{ adduser_user_name }}"
+    become: yes
      
