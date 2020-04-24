@@ -1,10 +1,9 @@
 ---
-- name: Change pwd2
-  hosts: all
-  connection: local
-  tasks:
-   - name: Change password
-     win_user: 
-      name: Administrator@automation.local
-      password: "1234"
+- name: Add the user
+  user: 
+  name: lookpla
+  comment: lookpla Wipawan
+  uid: 123
+  group: admin
+
      
