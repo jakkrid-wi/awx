@@ -1,6 +1,7 @@
 ---
 - name: Change pwd2
-  hosts: all 
+  hosts: all
+  connection: local
   tasks:
    - name: Change password
      win_user: 
