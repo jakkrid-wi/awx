@@ -1,0 +1,12 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+   - name: Add user "sysadmin" 
+     user:
+       name: sysadmin
+       comment: "Privileged User"
+       append: yes
