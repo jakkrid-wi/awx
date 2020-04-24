@@ -1,7 +1,7 @@
 ---
 - name: Add the user
   user: 
-  name: lookpla
-  group: admin
+   - name: lookpla
+
 
      
