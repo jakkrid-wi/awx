@@ -1,0 +1,45 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: false
+
+  vars:
+    default_user_password:
+    - password : "1234"
+
+    groups:
+    - name: "ADMIN_GROUP"
+
+
+  tasks:
+  - name: Ensure group "{{ groups }}" exists
+    group:
+      name: "{{ groups }}"
+      state: present
+
+  - name: Create Users Task
+    user:
+        name: "{{ item }}"
+        state: present
+        password: "{{ default_user_password }}"
+        # shell: /bin/bash
+        # groups: "{{ admin_group }}"
+        append: true
+    loop:
+        - bob
+        - wendy
+        - lofty
+        - dizzy
+
+  - name: Delete Users
+    user:              
+        name: "{{ item }}"
+        state: absent
+        remove: true
+    loop:              
+        - bob            
+        - wendy          
+        - lofty          
+        - dizzy      
+
