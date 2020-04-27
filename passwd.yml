@@ -6,5 +6,5 @@
   - name: Change Password
     user:
       name: root
-      password: "{{ root_pwd | password_hash('abcd') }}"
+      password: "{{ abcd }}"
       update_password: always
