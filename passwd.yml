@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  vars_prompt:
+  - name: root_pwd
+    prompt: "Enter Password: "
+    private: yes
+    encrypt: "abcd"
+    confirm: yes
+  tasks:
+  - name: Change Password
+    user:
+      name: root
+      password: "{{ root_pwd | password_hash('1234') }}"
+      update_password: always
