@@ -1,8 +1,11 @@
 ---
 - hosts: all
   tasks:
-- name: Remove User
-  user:
-    name: sysadmin
-    state: absent
-    remove: yes
+   - name: Remove User
+     user:
+     name: sysadmin
+     state: absent
+     remove: yes
+    
+    
+      
