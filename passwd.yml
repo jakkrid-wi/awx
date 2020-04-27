@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   vars_prompt:
-  - name: root_pwd
+  - name: root
     prompt: "Enter Password: "
     private: yes
     encrypt: "abcd"
