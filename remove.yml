@@ -1,7 +1,7 @@
 ---
 - hosts: all
   tasks:
-- name: Remove the user 'sysadmin'
+- name: Remove User
   user:
     name: sysadmin
     state: absent
