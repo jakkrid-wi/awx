@@ -1,7 +1,5 @@
 ---
-- hosts: all
-  tasks:
-   - name: delete user
+ - name: delete user
      user:
      name: sysadmin
      state: absent
