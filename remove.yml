@@ -1,7 +1,4 @@
----
-- hosts: all
-   tasks:
-    - name: Remove User
+- name: Remove User
       user:
        name: '{{ username }}'
        state: absent
