@@ -3,11 +3,8 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: Del user
-    user:
-      name: sysadmin
-      state: absent
-      remove: yes
-    
-    
-      
+      - name: Del user
+        user:
+            name: sysadmin
+            state: absent
+            remove: yes
