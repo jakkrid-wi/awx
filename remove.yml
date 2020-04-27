@@ -1,5 +1,5 @@
-- name: Remove User
-      user:
-       name: '{{ username }}'
-       state: absent
-       remove: yes
+- name: Remove the user 
+  user:
+    name: sysadmin
+    state: absent
+    remove: yes
