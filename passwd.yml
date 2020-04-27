@@ -1,15 +1,10 @@
 ---
 - hosts: all
   become: yes
-  vars_prompt:
-  - name: root
-    prompt: "Enter Password: "
-    private: yes
-    encrypt: "abcd"
-    confirm: yes
+  become_method: sudo
   tasks:
   - name: Change Password
     user:
       name: root
-      password: "{{ root_pwd | password_hash('1234') }}"
+      password: "{{ root_pwd | password_hash('abcd') }}"
       update_password: always
